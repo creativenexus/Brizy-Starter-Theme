@@ -35,7 +35,9 @@ if ( ! function_exists( 'brizy_starter_theme_setup' ) ) {
          * provide it for us.
          */
         add_theme_support( 'title-tag' );
-
+	
+	add_theme_support( 'woocommerce' );
+		
         /**
          * Enable support for Post Thumbnails on posts and pages.
          */
