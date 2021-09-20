@@ -24,9 +24,9 @@ if ( ! function_exists( 'brizy_starter_theme_setup' ) ) {
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.
          * If you're building a theme based on Brizy Starter Theme, use a find and replace
-         * to change 'brizy-starter-theme' to the name of your theme in all the template files.
+         * to change 'creativenexus-visual' to the name of your theme in all the template files.
          */
-        load_theme_textdomain( 'brizy-starter-theme', get_template_directory() . '/languages' );
+        load_theme_textdomain( 'creativenexus-visual', get_template_directory() . '/languages' );
 
         /**
          * Let WordPress manage the document title.
@@ -55,9 +55,9 @@ if ( ! function_exists( 'brizy_starter_theme_setup' ) ) {
 
         register_nav_menus(
             array(
-                'primary'   => __( 'Primary Menu', 'brizy-starter-theme' ),
-                'secondary' => __( 'Secondary Menu', 'brizy-starter-theme' ),
-                'footer'    => __( 'Footer Menu', 'brizy-starter-theme' )
+                'primary'   => __( 'Primary Menu', 'creativenexus-visual' ),
+                'secondary' => __( 'Secondary Menu', 'creativenexus-visual' ),
+                'footer'    => __( 'Footer Menu', 'creativenexus-visual' )
             )
         );
 
@@ -102,7 +102,7 @@ add_action( 'after_setup_theme', 'brizy_starter_theme_setup' );
  */
 if ( ! function_exists( 'brizy_starter_theme_scripts_styles' ) ) {
 	function brizy_starter_theme_scripts_styles() {
-        wp_enqueue_style( 'brizy-starter-theme-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
+        wp_enqueue_style( 'creativenexus-visual-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
 
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
             wp_enqueue_script( 'comment-reply' );
@@ -154,20 +154,20 @@ if ( ! function_exists( 'brizy_starter_theme_entry_footer' ) ) :
             // Posted on
             brizy_starter_theme_posted_on();
 
-            $categories_list = get_the_category_list( __( ', ', 'brizy-starter-theme' ) );
+            $categories_list = get_the_category_list( __( ', ', 'creativenexus-visual' ) );
             if ( $categories_list ) {
                 printf(
                     '<span class="cat-links"><span class="screen-reader-text">%1$s</span>%2$s</span>',
-                    __( 'Posted in', 'brizy-starter-theme' ),
+                    __( 'Posted in', 'creativenexus-visual' ),
                     $categories_list
                 );
             }
 
-            $tags_list = get_the_tag_list( '', __( ', ', 'brizy-starter-theme' ) );
+            $tags_list = get_the_tag_list( '', __( ', ', 'creativenexus-visual' ) );
             if ( $tags_list ) {
                 printf(
                     '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-                    __( 'Tags:', 'brizy-starter-theme' ),
+                    __( 'Tags:', 'creativenexus-visual' ),
                     $tags_list
                 );
             }
@@ -187,7 +187,7 @@ if ( ! function_exists( 'brizy_starter_theme_posted_by' ) ) :
     function brizy_starter_theme_posted_by() {
         printf(
             '<span class="byline"><span class="screen-reader-text">%1$s</span><span class="author vcard"><a class="url fn n" href="%2$s">%3$s</a></span></span>',
-            __( 'Posted by', 'brizy-starter-theme' ),
+            __( 'Posted by', 'creativenexus-visual' ),
             esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
             esc_html( get_the_author() )
         );
@@ -230,7 +230,7 @@ if ( ! function_exists( 'brizy_starter_theme_comment_count' ) ) :
         if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
             echo '<span class="comments-link">';
 
-            comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'brizy-starter-theme' ), get_the_title() ) );
+            comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'creativenexus-visual' ), get_the_title() ) );
 
             echo '</span>';
         }
@@ -277,8 +277,8 @@ function brizy_ocdi_after_import_setup() {
 
 if ( ! function_exists( 'brizy_starter_theme_register_sidebar' ) ) :
     function brizy_starter_theme_register_sidebar() {
-        register_sidebars( 2, array( 'name' => 'Sidebar %d', 'brizy-starter-theme' ) );
-	register_sidebars( 4, array( 'name' => 'Footer %d', 'brizy-starter-theme' ) );
+        register_sidebars( 2, array( 'name' => 'Sidebar %d', 'creativenexus-visual' ) );
+	register_sidebars( 4, array( 'name' => 'Footer %d', 'creativenexus-visual' ) );
     }
     add_action( 'widgets_init', 'brizy_starter_theme_register_sidebar' );
 endif;
@@ -297,18 +297,18 @@ if ( ! function_exists( 'brizy_starter_theme_plugins' ) ) {
     function brizy_starter_theme_plugins() {
         $plugins = array(
             array(
-                'name'      => esc_html__('Brizy', 'brizy-starter-theme'),
+                'name'      => esc_html__('Brizy', 'creativenexus-visual'),
                 'slug'      => 'brizy',
                 'required'  => true
             ),
             array(
-                'name'      => esc_html__('Brizy Pro', 'brizy-starter-theme'),
+                'name'      => esc_html__('Brizy Pro', 'creativenexus-visual'),
                 'slug'      => 'brizy-pro',
                 'source'    => THEME_DIR . '/includes/plugins/brizy-pro.zip',
                 'required'  => false
             ),
             array(
-                'name'       => esc_html__('One Click Demo Import', 'brizy-starter-theme'),
+                'name'       => esc_html__('One Click Demo Import', 'creativenexus-visual'),
                 'slug'       => 'one-click-demo-import',
                 'required'   => false
             ),
@@ -348,7 +348,7 @@ function brizy_ocdi_import_files() {
             'import_file_url'            => $uri .'architekt/demo-content.xml',
             'import_customizer_file_url' => $uri .'architekt/customizer.dat',
             'import_preview_image_url'   => $uri .'architekt/preview.png',
-            'import_notice'              => __( 'You need to <a href="'. admin_url("plugin-install.php?tab=plugin-information&plugin=woocommerce") .'" target="_blank">Install Now WooCommerce</a> plugin for this demo', 'brizy-starter-theme' ),
+            'import_notice'              => __( 'You need to <a href="'. admin_url("plugin-install.php?tab=plugin-information&plugin=woocommerce") .'" target="_blank">Install Now WooCommerce</a> plugin for this demo', 'creativenexus-visual' ),
             'preview_url'                => 'https://demo.themefuse.com/?theme=wordpress-business-theme',
         ),
         array(
@@ -358,7 +358,7 @@ function brizy_ocdi_import_files() {
             'import_widget_file_url'     => 'http://www.your_domain.com/ocdi/widgets2.json',
             'import_customizer_file_url' => 'http://www.your_domain.com/ocdi/customizer2.dat',
             'import_preview_image_url'   => 'http://www.your_domain.com/ocdi/preview_import_image2.jpg',
-            'import_notice'              => __( 'A special note for this import.', 'brizy-starter-theme' ),
+            'import_notice'              => __( 'A special note for this import.', 'creativenexus-visual' ),
             'preview_url'                => 'http://www.your_domain.com/my-demo-2',
         ),
     );

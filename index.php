@@ -29,11 +29,11 @@ get_header();
                     'mid_size'  => 2,
                     'prev_text' => sprintf(
                         '<span class="nav-prev-text">%s</span>',
-                        __( 'Newer posts', 'brizy-starter-theme' )
+                        __( 'Newer posts', 'creativenexus-visual' )
                     ),
                     'next_text' => sprintf(
                         '<span class="nav-next-text">%s</span>',
-                        __( 'Older posts', 'brizy-starter-theme' )
+                        __( 'Older posts', 'creativenexus-visual' )
                     ),
                 )
             );

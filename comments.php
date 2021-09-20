@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 
     <?php if ( have_comments() ) : ?>
         <h3 class="comments-title">
-            <?php printf( _n( 'One Response', '%1$s Responses', get_comments_number(), 'brizy-starter-theme' ), number_format_i18n( get_comments_number() ), get_the_title() ); ?>
+            <?php printf( _n( 'One Response', '%1$s Responses', get_comments_number(), 'creativenexus-visual' ), number_format_i18n( get_comments_number() ), get_the_title() ); ?>
         </h3>
 
         <?php the_comments_navigation(); ?>
@@ -43,7 +43,7 @@ if ( post_password_required() ) {
     // If comments are closed and there are comments, let's leave a little note, shall we?
     if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
         ?>
-        <p class="no-comments"><?php _e( 'Comments are closed.', 'brizy-starter-theme' ); ?></p>
+        <p class="no-comments"><?php _e( 'Comments are closed.', 'creativenexus-visual' ); ?></p>
     <?php endif; ?>
 
     <?php

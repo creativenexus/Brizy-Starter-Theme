@@ -28,18 +28,18 @@ get_header();
 					the_post_navigation(
 						array(
 							/* translators: %s: parent post link */
-							'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'brizy-starter-theme' ), '%title' ),
+							'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'creativenexus-visual' ), '%title' ),
 						)
 					);
 				} elseif ( is_singular( 'post' ) ) {
 					// Previous/next post navigation.
 					the_post_navigation(
 						array(
-							'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next Post', 'brizy-starter-theme' ) . '</span> ' .
-								'<span class="screen-reader-text">' . __( 'Next post:', 'brizy-starter-theme' ) . '</span> <br/>' .
+							'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next Post', 'creativenexus-visual' ) . '</span> ' .
+								'<span class="screen-reader-text">' . __( 'Next post:', 'creativenexus-visual' ) . '</span> <br/>' .
 								'<span class="post-title">%title</span>',
-							'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous Post', 'brizy-starter-theme' ) . '</span> ' .
-								'<span class="screen-reader-text">' . __( 'Previous post:', 'brizy-starter-theme' ) . '</span> <br/>' .
+							'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous Post', 'creativenexus-visual' ) . '</span> ' .
+								'<span class="screen-reader-text">' . __( 'Previous post:', 'creativenexus-visual' ) . '</span> <br/>' .
 								'<span class="post-title">%title</span>',
 						)
 					);

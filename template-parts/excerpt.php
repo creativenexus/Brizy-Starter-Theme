@@ -9,7 +9,7 @@
 	<header class="page-header">
 		<?php
 		if ( is_sticky() && is_home() && ! is_paged() ) {
-			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'brizy-starter-theme' ) );
+			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'creativenexus-visual' ) );
 		}
 		the_title( sprintf( '<h2 class="page-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		?>

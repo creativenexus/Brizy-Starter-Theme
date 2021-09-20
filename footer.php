@@ -16,10 +16,10 @@
 			<?php if ( ! empty( $blog_info ) ) : ?>
 				<a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>,
 			<?php endif; ?>
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'brizy-starter-theme' ) ); ?>" class="imprint">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'creativenexus-visual' ) ); ?>" class="imprint">
 				<?php
 				/* translators: %s: WordPress. */
-				printf( __( 'Proudly powered by %s.', 'brizy-starter-theme' ), 'WordPress' );
+				printf( __( 'Proudly powered by %s.', 'creativenexus-visual' ), 'WordPress' );
 				?>
 			</a>
 			<?php
@@ -28,7 +28,7 @@
 			}
 			?>
 			<?php if ( has_nav_menu( 'footer' ) ) : ?>
-				<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'brizy-starter-theme' ); ?>">
+				<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'creativenexus-visual' ); ?>">
 					<?php
 					wp_nav_menu(
 						array(

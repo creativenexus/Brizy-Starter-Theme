@@ -13,7 +13,7 @@ get_header();
 
 			<header class="page-header">
 				<h1 class="page-title">
-					<?php _e( 'Search results for:', 'brizy-starter-theme' ); ?>
+					<?php _e( 'Search results for:', 'creativenexus-visual' ); ?>
 				</h1>
 				<div class="page-description"><?php echo get_search_query(); ?></div>
 			</header><!-- .page-header -->
@@ -38,11 +38,11 @@ get_header();
                     'mid_size'  => 2,
                     'prev_text' => sprintf(
                         '<span class="nav-prev-text">%s</span>',
-                        __( 'Newer posts', 'brizy-starter-theme' )
+                        __( 'Newer posts', 'creativenexus-visual' )
                     ),
                     'next_text' => sprintf(
                         '<span class="nav-next-text">%s</span>',
-                        __( 'Older posts', 'brizy-starter-theme' )
+                        __( 'Older posts', 'creativenexus-visual' )
                     ),
                 )
             );
