@@ -18,8 +18,8 @@ define( 'THEME_URI', get_template_directory_uri() );
 /**
  * Set up theme support
  */
-if ( ! function_exists( 'brizy_starter_theme_setup' ) ) {
-	function brizy_starter_theme_setup() {
+if ( ! function_exists( 'creativenexus_visual_setup' ) ) {
+	function creativenexus_visual_setup() {
         /**
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.
@@ -95,7 +95,7 @@ if ( ! function_exists( 'brizy_starter_theme_setup' ) ) {
 
 	}
 }
-add_action( 'after_setup_theme', 'brizy_starter_theme_setup' );
+add_action( 'after_setup_theme', 'creativenexus_visual_setup' );
 
 /**
  * Theme Scripts & Styles
